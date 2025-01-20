@@ -12,6 +12,16 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        'login-form': "url('')",
+      },
+      transitionDuration: {
+        "button-duration": '3s'
+      },
+      boxShadow: {
+        "header": '0 0 10px -3px rgba(0,0,0,0.3)',
+        
+      }
     },
   },
   plugins: [],

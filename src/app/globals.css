@@ -20,8 +20,37 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media (min-width: 1537px) {
+  .container {
+      max-width: 1536px !important;
   }
+}
+
+/**************** Login Form Styles *****************/
+.main-section {
+  background-image: url('./../../public/assets/images/auth-bg-2.jpg');
+}
+
+.login-modal {
+  background-image: url('./../../public/assets/images/login-form-bg.jpg');
+}
+
+/****************** Home Styles *****************************/
+
+.offer-sticker .inner:before {
+  content: "10% OFF";
+  position: absolute;
+  top: 20%;
+  right: 10px;
+  z-index: 1;
+  color: #777;
+  font-size: 150px;
+  font-family: "Arial, Serif";
+  font-weight: bolder;
+  opacity: 0.1;
+}
+
+/****************** Footer Styles *****************************/
+footer {
+  background-image: url('./../../public/assets/images/collection-item1.jpg');
 }

@@ -106,8 +106,8 @@ export default  function LoginForm() {
           </div>
 
           {/* Remember me checkbox and forget passworg button */}
-          <div className="flex justify-between items-center text-[15px]">
-            <div className="flex items-center">
+          <div className="text-[15px]">
+            {/* <div className="flex items-center">
               <input
                 type="checkbox"
                 name="remember-me"
@@ -115,9 +115,9 @@ export default  function LoginForm() {
                 className="mr-1"
               />
               <label htmlFor="remember-me" className="text-zinc-900 text-sm md:text-md">Remember me</label>
-            </div>
+            </div> */}
 
-            <button className="text-zinc-900 text-sm md:text-md">Forgot your password?</button>
+            <button className="text-zinc-900 text-[15px] ">Forgot your password?</button>
           </div>
 
           {/* Error Feedback Message */}

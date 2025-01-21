@@ -14,7 +14,7 @@ export default function Posters () {
           <div className="inner w-full 2xl:max-w-[90%] mx-auto">
           <h2 className="text-zinc-900 text-2xl font-bold mb-8 tracking-widest">COLLECTIONS</h2>
 
-          <div className="flex flex-col md-flex-row gap-6">
+          <div className="flex flex-col md:flex-row gap-6">
             <div className='rounded-2xl overflow-hidden'>
                 <Image src={CollectionItem1} alt="" className='w-full' />
             </div>

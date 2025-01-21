@@ -4,9 +4,9 @@ export default function OfferStiker() {
   return (
     <section className='offer-sticker py-20'>
         <div className="container mx-auto">
-            <div className='inner w-full 2xl:w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center bg-slate-100 p-16 overflow-hidden relative sm:before:text-[120px] md:before:text-[135px]  lg:before:text-[150px]'>
+            <div className='inner w-full 2xl:w-[90%] mx-auto flex flex-col md:flex-row justify-between items-center bg-slate-100 p-16 overflow-hidden relative before:text-[90px] sm:before:text-[120px] md:before:text-[135px] lg:before:text-[150px]'>
                 <div >
-                    <h2 className='text-[55px] font-extrabold'>10% OFF Discount Coupons</h2>
+                    <h2 className='text-[55px] font-extrabold text-zinc-900'>10% OFF Discount Coupons</h2>
                     <p className='text-xl italic text-gray-500'>Subscribe us to get 10% OFF on all the purchases</p>
                 </div>
 

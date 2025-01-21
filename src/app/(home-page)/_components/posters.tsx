@@ -12,7 +12,7 @@ export default function Posters () {
           {/* Section Heading */}
 
           <div className="inner w-full 2xl:max-w-[90%] mx-auto">
-          <h2 className="text-zinc-900 text-2xl font-bold mb-8 tracking-widest">COLLECTIONS</h2>
+          <h2 className="text-zinc-900 dark:text-zinc-50 text-2xl font-bold mb-8 tracking-widest">COLLECTIONS</h2>
 
           <div className="flex flex-col md-flex-row gap-6">
             <div className='rounded-2xl overflow-hidden'>

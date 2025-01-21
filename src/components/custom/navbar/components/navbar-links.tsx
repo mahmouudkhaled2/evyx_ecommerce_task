@@ -24,7 +24,7 @@ export default function NavbarMainLinks() {
 
         {/* Menu Toggler */}
         <div onClick={handleToggler} className='navbar-toggler cursor-pointer'>
-            <i className="fa-solid fa-bars text-2xl"></i>
+            <i className="fa-solid fa-bars text-2xl text-zinc-900"></i>
         </div>
     </div>
 

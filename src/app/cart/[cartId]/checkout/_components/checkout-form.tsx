@@ -2,9 +2,7 @@
 
 import { useState } from "react";
 import { useFormik } from "formik";
-// import { useContext, useState } from "react";
 import { checkoutSchema } from "@/lib/schemas/checkout.schema";
-// import { CartContext } from "@/lib/contexts/cart.context";
 import CustomButton from "@/app/auth/_components/custom-button";
 import { CONTENT_TYPE } from "@/lib/constants/api.constant";
 
@@ -13,7 +11,7 @@ type CheckoutFields = {
       phone: string,
       city: string
 };
-// {cartId} : {cardId: string}
+
 export default  function CheckoutForm({cartId} : {cartId: string | undefined}) {
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -35,8 +33,6 @@ export default  function CheckoutForm({cartId} : {cartId: string | undefined}) {
       const response = await fetch(`/api/${cartId}?url=${window.location.origin}`, requestOptions);
 
       const payload = await response.json();
-
-      console.log('SEEEEE:', payload)
       
       if (payload.data.status === 'success') {
         window.location.href = payload.data.session.url;
@@ -75,12 +71,12 @@ export default  function CheckoutForm({cartId} : {cartId: string | undefined}) {
   return (
     <>
       <div className="p-10 relative z-20">
-        <h2 className="mb-8 text-center text-2xl font-semibold">Shipping Address</h2>
+        <h2 className="mb-8 text-center text-2xl font-semibold text-zinc-900">Shipping Address</h2>
 
         <form onSubmit={formik.handleSubmit}>
           {/* Details Field */}
           <div className="mb-5">
-            <label htmlFor="details" className="text-[15px]">
+            <label htmlFor="details" className="text-[15px] text-zinc-900">
              {" Address's Details"} <span className="text-red-500">*</span>
             </label>
             <input
@@ -91,7 +87,7 @@ export default  function CheckoutForm({cartId} : {cartId: string | undefined}) {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               placeholder="enter your address's details"
-              className="w-full p-2.5 border border-[#bbb] outline-none placeholder:text-sm"
+              className="w-full p-2.5 border border-[#bbb] outline-none text-zinc-900 placeholder:text-sm"
             />
 
             {/* Details Validation Error */}
@@ -100,7 +96,7 @@ export default  function CheckoutForm({cartId} : {cartId: string | undefined}) {
 
           {/* Phone Field */}
           <div className="mb-3">
-            <label htmlFor="phone" className="text-[15px]">
+            <label htmlFor="phone" className="text-[15px] text-zinc-900">
               Phone Number <span className="text-red-500">*</span>
             </label>
             <input
@@ -110,7 +106,7 @@ export default  function CheckoutForm({cartId} : {cartId: string | undefined}) {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               placeholder="enter your phone number"
-              className="w-full p-2.5 border border-[#bbb] outline-none placeholder:text-sm"
+              className="w-full p-2.5 border border-[#bbb] outline-none text-zinc-900 placeholder:text-sm"
             />
 
             {/* Phone Validation Error */}
@@ -123,7 +119,7 @@ export default  function CheckoutForm({cartId} : {cartId: string | undefined}) {
           
           {/* City Field */}
           <div className="mb-5">
-            <label htmlFor="city" className="text-[15px]">
+            <label htmlFor="city" className="text-[15px] text-zinc-900">
               City <span className="text-red-500">*</span>
             </label>
             <input
@@ -134,19 +130,15 @@ export default  function CheckoutForm({cartId} : {cartId: string | undefined}) {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               placeholder="enter your city name"
-              className="w-full p-2.5 border border-[#bbb] outline-none placeholder:text-sm"
+              className="w-full p-2.5 border border-[#bbb] outline-none text-zinc-900 placeholder:text-sm"
             />
 
             {/* city Validation Error */}
             {formik.errors.city && formik.touched.city && <div className="text-sm text-red-500 mt-1">{formik.errors.city}</div>}
           </div>
 
-
-          {/* Error Feedback Message */}
-          {/* {error && <p className="text-center text-[15px] text-red-600 transition-all my-5">{error}</p>} */}
-
           {/* Submit Button */}
-          <CustomButton loading={isLoading} type={"submit"} title={"Checkout"} styles="flex justify-center items-center w-full mt-5 py-2.5 text-center border border-[#bbb] hover:bg-black hover:text-white transition duration-300 mb-5"/>
+          <CustomButton loading={isLoading} type={"submit"} title={"Checkout"} styles="flex justify-center items-center w-full mt-5 py-2.5 text-center border border-[#bbb] text-zinc-900 hover:bg-black hover:text-white transition duration-300 mb-5"/>
 
         </form>
       </div>

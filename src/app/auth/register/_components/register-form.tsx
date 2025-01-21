@@ -56,13 +56,13 @@ export default function RegisterForm() {
   return (
     <>
       <div className="p-10 relative z-20">
-        <h2 className="mb-8 text-center text-2xl font-semibold">Sign Up</h2>
+        <h2 className="mb-8 text-center text-2xl font-semibold text-zinc-900">Sign Up</h2>
 
         <form onSubmit={formik.handleSubmit}>
 
           {/* Full Name Field */}  
           <div className="mb-3">
-            <label htmlFor="name" className="text-[15px]">
+            <label htmlFor="name" className="text-[15px] text-zinc-900">
               Full Name <span className="text-red-500">*</span>
             </label>
             <input
@@ -72,7 +72,7 @@ export default function RegisterForm() {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               placeholder="enter your name"
-              className="w-full p-2.5 border border-[#bbb] outline-none placeholder:text-sm"
+              className="w-full p-2.5 border border-[#bbb] outline-none text-zinc-900 placeholder:text-sm"
             />
 
             {/* Name Validation Error */}
@@ -85,7 +85,7 @@ export default function RegisterForm() {
 
           {/* Email Field */}
           <div className="mb-3">
-            <label htmlFor="email" className="text-[15px]">
+            <label htmlFor="email" className="text-[15px] text-zinc-900">
               Email <span className="text-red-500">*</span>
             </label>
             <input
@@ -95,7 +95,7 @@ export default function RegisterForm() {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               placeholder="enter your email address"
-              className="w-full p-2.5 border border-[#bbb] outline-none placeholder:text-sm"
+              className="w-full p-2.5 border border-[#bbb] outline-none text-zinc-900 placeholder:text-sm"
             />
 
             {/* Email Validation Error */}
@@ -108,7 +108,7 @@ export default function RegisterForm() {
 
             {/* Password Field */}
             <div className="mb-3 relative">
-              <label htmlFor="password" className="text-[15px]">
+              <label htmlFor="password" className="text-[15px] text-zinc-900">
                 Password <span className="text-red-500">*</span>
               </label>
               <input
@@ -118,7 +118,7 @@ export default function RegisterForm() {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 placeholder="••••••••"
-                className="w-full p-2.5 border border-[#bbb] outline-none placeholder:text-sm"
+                className="w-full p-2.5 border border-[#bbb] outline-none text-zinc-900 placeholder:text-sm"
               />
 
               
@@ -141,7 +141,7 @@ export default function RegisterForm() {
 
             {/* Re-Password Field */}
             <div className="mb-3 relative">
-              <label htmlFor="rePassword" className="text-[15px]">
+              <label htmlFor="rePassword" className="text-[15px] text-zinc-900">
                 Confirm Password <span className="text-red-500">*</span>
               </label>
               <input
@@ -151,7 +151,7 @@ export default function RegisterForm() {
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 placeholder="••••••••"
-                className="w-full p-2.5 border border-[#bbb] outline-none placeholder:text-sm"
+                className="w-full p-2.5 border border-[#bbb] outline-none text-zinc-900 placeholder:text-sm"
               />
 
 
@@ -174,7 +174,7 @@ export default function RegisterForm() {
 
           {/* Phone Field */}
           <div className="mb-3">
-            <label htmlFor="phone" className="text-[15px]">
+            <label htmlFor="phone" className="text-[15px] text-zinc-900">
               Phone Number <span className="text-red-500">*</span>
             </label>
             <input
@@ -184,7 +184,7 @@ export default function RegisterForm() {
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               placeholder="enter your phone number"
-              className="w-full p-2.5 border border-[#bbb] outline-none placeholder:text-sm"
+              className="w-full p-2.5 border border-[#bbb] outline-none text-zinc-900 placeholder:text-sm"
             />
 
             {/* Phone Validation Error */}
@@ -197,10 +197,10 @@ export default function RegisterForm() {
 
           {/* Remember me checkbox and forget passworg button */}
           <div className="flex justify-center items-center gap-1 text-sm">
-            <p>Do you already have an account? </p>
+            <p className="text-zinc-900">Do you already have an account? </p>
             <Link
               href="/auth/login"
-              className="underline font-semibold cursor-pointer"
+              className="underline font-semibold cursor-pointer text-zinc-900"
             >
               Login
             </Link>
@@ -210,7 +210,7 @@ export default function RegisterForm() {
           {error && <p className="text-center text-[15px] text-red-600 transition-all my-5">{error}</p>}
 
           {/* Submit Button */}
-          <CustomButton loading={isLoading} type={"submit"} title={"Create an Account"} styles="flex justify-center items-center w-full mt-5 py-2.5 text-center border border-[#bbb] hover:bg-black hover:text-white transition duration-300"/>
+          <CustomButton loading={isLoading} type={"submit"} title={"Create an Account"} styles="flex justify-center items-center w-full mt-5 py-2.5 text-center border border-[#bbb] hover:bg-black text-zinc-900 hover:text-white transition duration-300"/>
 
         </form>
       </div>

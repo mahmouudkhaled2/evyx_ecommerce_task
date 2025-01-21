@@ -74,7 +74,7 @@ export default  function CheckoutForm({cartId} : {cartId: string | undefined}) {
 
   return (
     <>
-      <div className="p-10 relative">
+      <div className="p-10 relative z-20">
         <h2 className="mb-8 text-center text-2xl font-semibold">Shipping Address</h2>
 
         <form onSubmit={formik.handleSubmit}>

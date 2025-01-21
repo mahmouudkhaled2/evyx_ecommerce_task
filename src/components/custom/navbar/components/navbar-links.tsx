@@ -35,7 +35,7 @@ export default function NavbarMainLinks() {
 
             {['Home', 'Men', 'Women', 'Shop', 'Sale'].map ((page, index) => 
                 <li key={index} onClick={handleToggler} className="py-3 md:py-0 bg-slate-100 hover:bg-slate-200 md:bg-transparent md:hover:bg-transparent hover:transition duration-200 cursor-pointer w-full text-center">
-                    <Link href="/" className='text-[15px] lg:text-md font-semibold'>{page}</Link>
+                    <Link href="/" className='text-[15px] text-zinc-900 lg:text-md font-semibold'>{page}</Link>
                 </li>
             )  }
 

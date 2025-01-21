@@ -55,7 +55,7 @@ export default function RegisterForm() {
 
   return (
     <>
-      <div className="p-10 relative z-10">
+      <div className="p-10 relative z-20">
         <h2 className="mb-8 text-center text-2xl font-semibold">Sign Up</h2>
 
         <form onSubmit={formik.handleSubmit}>

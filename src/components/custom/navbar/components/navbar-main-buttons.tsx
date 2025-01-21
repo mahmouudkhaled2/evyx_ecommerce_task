@@ -27,10 +27,10 @@ const { numOfCartItems } = cartContext;
         
 
         <Link href="/cart" className="relative">
-          <i className="fa-solid fa-cart-shopping  text-2xl"></i>
+          <i className="fa-solid fa-cart-shopping text-2xl text-zinc-900"></i>
 
           {numOfCartItems > 0 && 
-          <div className="flex justify-center items-center w-4 h-4 rounded-full bg-white text-[12px] text-zinc-800 absolute top-[-1px] left-[7px] z-50">{isCartContext && numOfCartItems}
+          <div className="flex justify-center items-center w-4 h-4 rounded-full bg-white text-[12px] text-zinc-900 absolute top-[-1px] left-[7px] z-50">{isCartContext && numOfCartItems}
           </div>
           }
           

@@ -18,8 +18,8 @@ const path = usePathname();
             <div className="w-full 2xl:w-[90%] mx-auto flex justify-between items-center ">
               <SocialMediaLinks />
 
-              <p className="text-sm xl:text-md">
-                <strong className="tracking-[0.1em]">Special Offer: </strong>
+              <p className="text-sm xl:text-md text-zinc-900">
+                <strong className="tracking-[0.1em] text-zinc-900">Special Offer: </strong>
                 Free Shipping on all the orders above $100
               </p>
             </div>

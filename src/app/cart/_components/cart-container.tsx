@@ -11,7 +11,10 @@ export default function CartContainer() {
     const {data: cart , isLoading, error} = useCartItems();
     const items = cart?.data?.products;
     const subtotal = cart?.data?.totalCartPrice
-    const shipping = subtotal * 0.02;
+    const shipping = (subtotal * 0.02).toFixed(2);
+
+    console.log(shipping);
+    
 
   return (
     <>

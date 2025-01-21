@@ -5,7 +5,6 @@ import { useFormik } from "formik";
 // import { useContext, useState } from "react";
 import { checkoutSchema } from "@/lib/schemas/checkout.schema";
 // import { CartContext } from "@/lib/contexts/cart.context";
-import { APP_URL } from "@/lib/constants/common";
 import CustomButton from "@/app/auth/_components/custom-button";
 import { CONTENT_TYPE } from "@/lib/constants/api.constant";
 
@@ -33,7 +32,7 @@ export default  function CheckoutForm({cartId} : {cartId: string | undefined}) {
         },
         body: JSON.stringify(fields),
       }
-      const response = await fetch(`/api/${cartId}?url=${APP_URL}`, requestOptions);
+      const response = await fetch(`/api/${cartId}?url=${window.location.origin}`, requestOptions);
 
       const payload = await response.json();
 

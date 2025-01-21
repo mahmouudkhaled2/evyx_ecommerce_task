@@ -1,10 +1,14 @@
-import React from 'react'
+'use client'
 import SocialMediaLinks from './../navbar/components/social-media';
+import { usePathname } from 'next/navigation';
+import { authPages } from '@/lib/utils/auth-pages.util';
 
 export default function Footer() {
+
+    const path = usePathname();
   return (
     <>
-        <footer className='py-20 shadow-header bg-no-repeat bg-cover bg-center relative'>
+        <footer className={`${authPages.includes(path) ? 'hidden' : ''} py-20 shadow-header bg-no-repeat bg-cover bg-center relative`}>
             <div className='relative z-10'>
                 <div className='mb-5'>
                     <p className='text-center text-zinc-800 text-[15px] font-normal'>© Copyright E-Commerce Website Example 2025.</p>

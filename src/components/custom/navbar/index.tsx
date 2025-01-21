@@ -1,11 +1,17 @@
+'use client'
 import AppLogo from "@/components/common/app-logo";
 import SocialMediaLinks from "./components/social-media";
 import NavbarMainLinks from "./components/navbar-links";
+import { usePathname } from "next/navigation";
+import { authPages } from "@/lib/utils/auth-pages.util";
 
 export default function Navbar() {
+
+const path = usePathname();
+
   return (
     <>
-      <header className="fixed top-0 w-full z-50 shadow-header py-2 bg-white">
+      <header className={`${authPages.includes(path) ? 'hidden' : ''} fixed top-0 w-full z-50 shadow-header py-2 bg-white`}>
         {/* Social Media & Special Offers Part */}
         <div className="w-full border-b py-2 hidden md:block">
           <div className="container mx-auto">
@@ -35,7 +41,7 @@ export default function Navbar() {
         </div>
       </header>
 
-      <div className="h-[70px] md:h-[111px]"></div>
+      <div className={`${authPages.includes(path) ? 'hidden' : ''} h-[70px] md:h-[111px]`}></div>
     </>
   );
 }

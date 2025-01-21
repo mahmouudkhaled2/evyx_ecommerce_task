@@ -5,6 +5,7 @@ import { useAddToCart } from "@/hooks/use-add-to-cart"
 export default function ProductsButtons({productId}: {productId: string}) {
 
     const {mutate: addItem} = useAddToCart(productId);
+
     
   return (
     <>

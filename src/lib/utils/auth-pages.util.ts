@@ -1,0 +1,1 @@
+export const authPages = ['/auth/login', '/auth/register'];

@@ -1,5 +1,6 @@
 import { CONTENT_TYPE } from "@/lib/constants/api.constant";
 import { getToken } from "next-auth/jwt";
+import { redirect } from "next/navigation";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
@@ -7,8 +8,7 @@ export async function POST(req: NextRequest) {
     const token = await getToken({ req });
 
     if (!token) {
-        
-        return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+        redirect('/auth/login')
     }
 
     const { productId } = await req.json();

@@ -1,13 +1,13 @@
 import { getToken } from 'next-auth/jwt';
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { authPages } from './lib/utils/auth-pages.util';
  
 
 export default async function middleware(request: NextRequest) {
 
     const token = await getToken({req: request});
     const url = request.nextUrl.pathname;
-    const authPages = ['/auth/login', '/auth/register'];
     const privatePages = ['/cart'];
 
     // if user authenticated redirect him to home page.

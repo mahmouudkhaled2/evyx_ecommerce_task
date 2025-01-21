@@ -1,1 +1,2 @@
-export const APP_URL = "http://localhost:3000"
+export const APP_URL = process.env.NODE_ENV === 'production' ? "https://evyx-ecommerce-task.vercel.app" : "http://localhost:3000";
+

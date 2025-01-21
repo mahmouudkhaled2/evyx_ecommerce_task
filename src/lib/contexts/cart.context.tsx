@@ -1,7 +1,7 @@
 'use client'
 import { createContext, useState, Dispatch, SetStateAction, useEffect } from "react";
-// import getAllCartItems from "../apis/cart-items.api";
-import { useCartItems } from "@/app/cart/_hooks/use-cart-items";
+import { useSession } from "next-auth/react";
+import getAllCartItems from "../apis/cart-items.api";
 
 interface CartContextType {
   numOfCartItems: number ; 
@@ -20,15 +20,18 @@ interface CartProviderProps {
 export default function CartProvider({ children }: CartProviderProps) {
   const [numOfCartItems, setNumOfCartItems] = useState<number>(0);
 
-  // function getNumOfCartItems() {
-  //     const payload = await getAllCartItems();
-  // }
+    const session = useSession();
 
-  const {data: cart} = useCartItems();
+    const getNumOfCart = async () => {
+      const payload = await getAllCartItems();
+      setNumOfCartItems(payload?.numOfCartItems);
+    } 
 
   useEffect(() => {
-    setNumOfCartItems(cart?.numOfCartItems || 0)
-  },[cart?.numOfCartItems])
+    if (session.data) {
+      getNumOfCart();
+    }
+  },[numOfCartItems, session.data])
   
   return (
     <CartContext.Provider value={{ numOfCartItems, setNumOfCartItems }}>

@@ -23,7 +23,7 @@ export default function CartContainer() {
 
             {/* Cart Items */}
             {isLoading && 
-            <div className='w-full flex flex-col items-center gap-3 py-20 text-center text-zinc-800'>
+            <div className='w-full flex flex-col items-center gap-3 py-20 text-center text-zinc-900'>
                 Loading Cart...
                 <LoadingSpinner/>
             </div>} 
@@ -60,7 +60,7 @@ export default function CartContainer() {
                 title={"Check out"} 
                 disabled={!cart?.cartId}
                 styles={`flex justify-center items-center w-full mt-5 py-2.5 text-center border border-[#bbb]
-                ${!cart?.cartId ? 'opacity-50 cursor-not-allowed' : ''} hover:bg-black hover:text-white transition duration-300 mb-5`}/>
+                ${!cart?.cartId ? 'opacity-50 cursor-not-allowed' : ''} text-zinc-900 hover:bg-black hover:text-white transition duration-300 mb-5`}/>
             </Link>
 
           </div>

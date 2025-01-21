@@ -30,7 +30,7 @@ export default function CartItem({item}: {item: CartItem}) {
                 <div className='mb-6 sm:mb-0 w-full sm:w-1/2 text-center mx-2' >
 
                     {/* Product Title */}
-                    <h3 className="text-[15px] md:text-md font-bold mb-6 mt-4 sm:mt-0 truncate">{item?.product?.title}</h3>
+                    <h3 className="text-[15px] md:text-md font-bold mb-6 mt-4 sm:mt-0 truncate text-zinc-900">{item?.product?.title}</h3>
 
                     {/* Quantity Input */}
                     <div className='flex justify-center items-center'>
@@ -38,19 +38,19 @@ export default function CartItem({item}: {item: CartItem}) {
                         onClick={() => updataItem({productId: item.product._id, count: item.count + 1})}
                         type="button"
                         disabled={item.count === item.product.quantity}
-                        className={`flex justify-center items-center py-1.5 px-3 bg-slate-300 border hover:bg-slate-400 duration-300 ${item.count === item.product.quantity ? 'opacity-5 cursor-not-allowed': 'cursor-pointer'}`}>+</button>
+                        className={`flex justify-center items-center py-1.5 px-3 bg-slate-400 border hover:bg-slate-600 duration-300 ${item.count === item.product.quantity ? 'opacity-5 cursor-not-allowed': 'cursor-pointer'} text-zinc-900`}>+</button>
 
-                        <div className='w-12 py-1.5 px-3 text-center outline-none border'>{item?.count}</div>
+                        <div className='w-12 py-1.5 px-3 text-center outline-none border text-zinc-900'>{item?.count}</div>
 
                         <button 
                         onClick={() => updataItem({productId: item.product._id, count: item.count - 1})}
                         type='button'
                         disabled={item.count === 1}
-                        className={`flex justify-center items-center py-1.5 px-3 bg-slate-300 border hover:bg-slate-400 duration-300 ${item.count === 1 ? 'opacity-70 cursor-not-allowed': 'cursor-pointer'}`}>-</button>
+                        className={`flex justify-center items-center py-1.5 px-3 bg-slate-400 border hover:bg-slate-600 duration-300 ${item.count === 1 ? 'opacity-70 cursor-not-allowed': 'cursor-pointer'} text-zinc-900`}>-</button>
                     </div>
                 </div>
 
-                <strong className="w-full sm:w-1/4 text-center mx-2">${item?.price}</strong>
+                <strong className="w-full sm:w-1/4 text-center mx-2 text-zinc-900">${item?.price}</strong>
             </div>
         </div>  
     </>
